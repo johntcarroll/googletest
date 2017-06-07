@@ -11,8 +11,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   $client->setAccessToken($_SESSION['access_token']);
   $plus = new Google_Service_Plus($client);
   $person_data = $plus->people->get('me');
-  echo json_encode($person_data);
-  echo $person_data['id'];
+  print_r($person_data);
   echo $person_data->id;
   unset($_SESSION['access_token']);
   session_destroy();
