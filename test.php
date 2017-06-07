@@ -13,7 +13,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   $person_data = $plus->people;
   $print_r($people);
 } else {
-  $redirect_uri = 'https://' . $_SERVER['HTTP_HOST'] . '/callback';
+  $redirect_uri = 'https://staging.wgaca-works.com/googletest/callback.php';
   header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
 }
 ?>
