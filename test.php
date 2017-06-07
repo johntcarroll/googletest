@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(E_ALL); ini_set('display_errors', 1);
-require_once 'google-api/src/Google/autoload.php';
+require_once 'google-api/vendor/autoload.php';
 require_once '/etc/pki/tls/certs/google_creds.php';
 $gClient = new Google_Client();
 $gClient->setApplicationName('Login to WGACA-APPS');
