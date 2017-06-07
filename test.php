@@ -9,7 +9,7 @@ $gClient->setClientId($clientId);
 $gClient->setClientSecret($clientSecret);
 $gClient->setRedirectUri($redirectURL);
 
-$google_oauthV2 = new Google_Oauth2Service($gClient);
+$google_oauthV2 = new Google\Auth\OAuth2($gClient);
 
 if(isset($_GET['code'])){
     $gClient->authenticate($_GET['code']);
