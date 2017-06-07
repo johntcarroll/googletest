@@ -11,7 +11,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   $client->setAccessToken($_SESSION['access_token']);
   $plus = new Google_Service_Plus($client);
   $person_data = $plus->people;
-  $print_r($people);
+  print_r($person_data);
 } else {
   $redirect_uri = 'https://staging.wgaca-works.com/googletest/callback.php';
   header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
