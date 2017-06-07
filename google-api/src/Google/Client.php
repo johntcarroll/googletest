@@ -72,7 +72,7 @@ class Google_Client
   private $config;
 
   /**
-   * @var Psr\Log\LoggerInterface $logger
+   * @var Google_Logger_Abstract $logger
    */
   private $logger;
 
